@@ -19,6 +19,7 @@
 
 packagecloud_repo "ct/goiardi" do
   type "deb"
+  not_if { node['goiardi']['distro_package'] }
 end
 
 package "goiardi" do
